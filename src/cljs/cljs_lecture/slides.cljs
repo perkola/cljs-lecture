@@ -9,7 +9,7 @@
 
    "
    # Agenda
-   - Who are we?
+   - Who am I?
    - Course takeaways
    - ClojureScript
    - Reagent
@@ -17,9 +17,10 @@
    "
 
    "
-   # Who are we?
-   - MSc in Computer Science graduates at KTH
-   - Software Engineers at TriOptima
+   # Who am I?
+   - MSc in Computer Science graduate from KTH
+   - Software Engineer at
+   ![cljs-logo](images/trioptima-logo.png)
    "
 
    "
@@ -28,8 +29,8 @@
    - Used to be Java or Clojure
    - This is how it's done (almost)
      - The future is unknown
-     - Demands change
-     - Focus on writing good code
+     - Requirements change a lot
+     - The focus lies on writing good code
    "
 
    "
@@ -53,28 +54,15 @@
    "
    # Code sharing
    - Code without interop is often identical in clj and cljs
-   - `.cljc`
-   - Example: validation logic
-   "
-
-   "
-   # Hiccup
-   - Express html using Clojure data structures
-   - All seq fns available to manipulate/generate hiccup
-   ```clojure
-   [:div.example-class
-     [:h1 \"Hello world\"]
-     [:button {:on-click #(js/alert \"Clicked!\")}]]
-
-   (interpose [:span.icon \" ▶ \"] links)
-   ```
+   - `.cljc` (Clojure common)
+   - Validation logic, utility functions and more
    "
 
    "
    # Figwheel
    - Change hiccup/css/other logic
      - Automatically reloads
-     - Without having to recreate state
+     - State is preserved through reloads
    - Encourages writing \"reloadable\" code
    - Heads up display of compile errors
    "
@@ -82,6 +70,35 @@
    "
    # Figwheel
    ![figwheel](images/figwheel-errors.png)
+   "
+
+   "
+   # Hiccup
+   - Express html using Clojure data structures
+   ```clojure
+   [:div.example-class
+     [:h1 \"Hello world\"]
+     [:button {:on-click #(js/alert \"Clicked!\")} \"Click me!\"]]
+   ```
+   ```clojure
+   <div class=\"example-class\">
+     <h1>Hello world</h1>
+     <button onclick=\"alert(\"Clicked!\")\">Click me!</button>
+   </div>
+   ```
+   "
+
+   "
+   # Hiccup
+   - All seq fns available to manipulate/generate hiccup
+   ```clojure
+   (interpose [:span.icon \" ▶ \"] links)
+   ```
+   ```clojure
+   ([:a {:href \"/dashboard\"} \"Dashboard\"]
+    [:span.icon \" ▶ \"]
+    [:span \"Stats\"])
+   ```
    "
 
    "
@@ -167,7 +184,8 @@
 
    "
    # re-frame flow
-   ![dominoes](images/re-frame-dominoes.png)
+   ![dominoes](images/re-frame-dominoes1.png)
+   ![dominoes](images/re-frame-dominoes2.png)
    "
 
    "
@@ -184,7 +202,6 @@
    # Thank you!
    - [https://clojurescript.org/](https://clojurescript.org/)
    - [https://reagent-project.github.io/](https://reagent-project.github.io/)
-   - [https://github.com/tonsky/rum](https://github.com/tonsky/rum)
    - [https://github.com/Day8/re-frame](https://github.com/Day8/re-frame)
    "
    ])
