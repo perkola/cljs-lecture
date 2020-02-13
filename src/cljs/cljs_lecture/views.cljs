@@ -10,7 +10,6 @@
 (defn form-example []
   (let [text @(rf/subscribe [::subs/text])
         common-letters @(rf/subscribe [::subs/top-common-letters])]
-    ;(js-debugger)
     ;(.log js/console common-letters)
     [:div
      [:input {:on-change #(rf/dispatch [::events/text-changed (-> % .-target .-value)])

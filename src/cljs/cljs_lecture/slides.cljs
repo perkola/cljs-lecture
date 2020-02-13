@@ -195,10 +195,6 @@
    "
 
    "
-   # Example
-   "
-
-   "
    # Thank you!
    - [https://clojurescript.org/](https://clojurescript.org/)
    - [https://reagent-project.github.io/](https://reagent-project.github.io/)
