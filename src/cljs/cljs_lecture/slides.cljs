@@ -18,8 +18,10 @@
 
    "
    # Who am I?
+   - William Perkola
    - MSc in Computer Science graduate from KTH
-   - Software Engineer at
+   - Software Engineer at TriOptima
+
    ![cljs-logo](images/trioptima-logo.png)
    "
 
